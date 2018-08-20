@@ -26,6 +26,7 @@ const config = {
             },
             {
                 test: /\.js/,
+                // 使用babel将es6转成es5时，需要安装babel-preset-es2015，然后在.babelrc里面设置preset即可
                 use: "babel-loader",
                 // parser 属性可以更细粒度的配置哪些模块语法要解析哪些不解析，和 noParse 配置项的区别在于 parser 可以精确到语法层面， 而 noParse 只能控制哪些文件不被解析。
                 parser: {

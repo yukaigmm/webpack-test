@@ -1,5 +1,5 @@
 function show (content){
-    document.body.innerText = `helloa da ddd  ${content}`
+    document.body.innerText = `位德志很帅`
 }
 
 module.exports = show;
