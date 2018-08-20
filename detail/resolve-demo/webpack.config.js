@@ -33,7 +33,7 @@ const config = {
         // 配置 Webpack 去哪些目录下寻找第三方模块，默认是只会去 node_modules 目录下寻找。 有时你的项目里会有一些模块会大量被其它模块依赖和导入，由于其它模块的位置分布不定，针对不同的文件都要去计算被导入模块文件的相对路径， 这个路径有时候会很长，就像这样 import '../../../components/button' 这时你可以利用 modules 配置项优化，假如那些被大量导入的模块都在 ./src/components 目录下,就可以这样配置,然后通过import "button",webpack就会先去'./src/components'目录下查找button组件
         modules:['./src/components','node_modules'],
         // enforceExtension 如果配置为 true 所有导入语句都必须要带文件后缀， 例如开启前 import './foo' 能正常工作，开启后就必须写成 import './foo.js'
-        enforceExtension:false,
+        enforceExtension:false
     }
     
 }
