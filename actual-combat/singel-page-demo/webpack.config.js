@@ -31,18 +31,26 @@ const config = {
                         use: [
                             'vue-style-loader',
                             {
+                                loader:MiniCssExtractPlugin.loader
+                            },
+                            {
                                 loader: 'css-loader',
                                 options: {
                                     modules: true,
                                     localIdentName: '[name]_[hash:base64:5]'
                                 }
                             }
+                        
                         ]
                     },
                     // 这里匹配普通的 `<style>` 或 `<style scoped>`
                     {
                         use: [
                             'vue-style-loader',
+                            
+                            {
+                                loader:MiniCssExtractPlugin.loader
+                            },
                             'css-loader'
                         ]
                     }

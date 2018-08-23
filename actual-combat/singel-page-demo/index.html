@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="app?_inline">
+
+    <!-- 只用写app,插件能识别出这个是要对应内存中名字为app的chunk的js代码-->
+    <link rel="stylesheet" href="app">
     <title>Document</title>
 </head>
 <body>
     <div id="app"></div>
 </body>
-<script src="app"></script>
 <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
+<!-- 只用写app,插件能识别出这个是要对应内存中名字为app的chunk的js代码-->
+<script src="app"></script>
+
+<!-- 引入js，如果需要打包到app.js文件中的话，就要在main.js引入；如果想要直接在script标签里面导入js代码，那就这样配置即可 -->
 <script src="./src/index.js?_inline"></script>
 </html>
