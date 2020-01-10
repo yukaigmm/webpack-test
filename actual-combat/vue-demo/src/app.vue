@@ -2,8 +2,8 @@
     <div class="test">hello {{content}}</div>
 </template>
 
-
 <script>
+import axios from "axios";
     export default {
         data:()=>{
             return {
@@ -11,6 +11,10 @@
             }
         },
         mounted() {
+            axios.get("api/test").then((res) =>{
+                alert(res.data)
+                console.log(res)
+            })
         },
     }
 </script>
