@@ -15,6 +15,7 @@ const config = {
   mode: "production",
   // 使用引入的vue，就不用把vue打包了
   externals: {
+    // 键值对的意义-- 项目内引入的依赖名：静态资源中的全局变量名
     vue: "Vue"
   },
   devServer: {
